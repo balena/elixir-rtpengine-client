@@ -676,7 +676,7 @@ defmodule RtpEngineClient do
 
   defp translate_options([], _, options), do: Map.new(options)
   defp translate_options([{k, v} | t], allowed, options) do
-    if not Enum.member?(allowed, k) do
+    if not k in allowed do
       raise ArgumentError, "invalid option #{inspect k}"
     end
     translate_options(t, allowed, [translate_option(k, v) | options])
