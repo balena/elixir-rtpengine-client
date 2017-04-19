@@ -556,7 +556,14 @@ defmodule RtpEngineClient do
   def init({host, port}) do
     case Socket.Address.for(host, :inet) do
       {:ok, [rtpengine_address|_]} ->
-        options = [as: :binary, mode: :active, local: [address: "127.0.0.1"]]
+        listen_address =
+          if rtpengine_address == {127, 0, 0, 1} do
+            "127.0.0.1"
+          else
+            "0.0.0.0"
+          end
+
+        options = [as: :binary, mode: :active, local: [address: listen_address]]
         socket = Socket.UDP.open!(options)
 
         {:ok, {address, listen_port}} = :inet.sockname(socket)
