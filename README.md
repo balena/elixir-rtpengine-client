@@ -15,7 +15,7 @@ dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:rtpengineclient, "~> 0.1.3"}]
+  [{:rtpengineclient, "~> 0.1.4"}]
 end
 ```
 
