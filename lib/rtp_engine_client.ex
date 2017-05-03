@@ -725,9 +725,9 @@ defmodule RtpEngineClient do
     {"received from", [family, Kernel.to_string(:inet.ntoa(source_address))]}
   end
 
-  defp translate_option(:ICE, :remove), do: {"ICE", "remove"}
-  defp translate_option(:ICE, :force), do: {"ICE", "force"}
-  defp translate_option(:ICE, :force_relay), do: {"ICE", "force-relay"}
+  defp translate_option(:ice, :remove), do: {"ICE", "remove"}
+  defp translate_option(:ice, :force), do: {"ICE", "force"}
+  defp translate_option(:ice, :force_relay), do: {"ICE", "force-relay"}
 
   defp translate_option(:transport_protocol, transport_protocol) do
     transport_protocol =
