@@ -729,15 +729,8 @@ defmodule RtpEngineClient do
   defp translate_option(:ice, :force), do: {"ICE", "force"}
   defp translate_option(:ice, :force_relay), do: {"ICE", "force-relay"}
 
-  defp translate_option(:transport_protocol, transport_protocol) do
-    transport_protocol =
-      case transport_protocol do
-        "RTP/AVP" -> transport_protocol
-        "RTP/AVPF" -> transport_protocol
-        "RTP/SAVP" -> transport_protocol
-        "RTP/SAVPF" -> transport_protocol
-      end
-
+  defp translate_option(:transport_protocol, transport_protocol)
+      when is_binary(transport_protocol) do
     {"transport protocol", transport_protocol}
   end
 
