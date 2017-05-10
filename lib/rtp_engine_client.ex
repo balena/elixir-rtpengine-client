@@ -143,7 +143,7 @@ defmodule RtpEngineClient do
     {:to_tag, String.t}
 
   @type on_delete ::
-    :ok | {:error, reason :: term}
+    {:ok, term} | {:error, reason :: term}
 
   @type list_opts :: [list_option]
   @type list_option ::
