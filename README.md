@@ -3,6 +3,7 @@
 [![Hex.pm](https://img.shields.io/hexpm/l/rtpengineclient.svg "BSD Licensed")](https://github.com/balena/elixir-rtpengine-client/blob/master/LICENSE)
 [![Hex version](https://img.shields.io/hexpm/v/rtpengineclient.svg "Hex version")](https://hex.pm/packages/rtpengineclient)
 [![Build Status](https://travis-ci.org/balena/elixir-rtpengine-client.svg)](https://travis-ci.org/balena/elixir-rtpengine-client)
+[![Open Source Helpers](https://www.codetriage.com/balena/elixir-rtpengine-client/badges/users.svg)](https://www.codetriage.com/balena/elixir-rtpengine-client)
 
 This is an Elixir client for the Sipwise NGCP RtpEngine proxy. This client
 assumes you have configured the daemon to support the NG protocol, where the
